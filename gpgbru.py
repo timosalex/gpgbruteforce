@@ -17,7 +17,7 @@ def getWordlist():
 
 def isCorrectPassword(password):
     try:
-        output = run("gpg --pinentry-mode loopback --batch --yes --passphrase " + hashlib.sha256(password.encode()).hexdigest() + " -d  test.txt.gpg 2>&1", shell=True)   #shell injection potential, do not run on untrusted input
+        output = run("gpg --pinentry-mode loopback --batch --yes --passphrase " + hashlib.sha256(password.encode()).hexdigest() + " -d  signal.log.gpg 2>&1", shell=True)   #shell injection potential, do not run on untrusted input
         if "decryption failed:" in output:
             return False
         else:
