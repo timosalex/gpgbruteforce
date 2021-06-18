@@ -7,7 +7,6 @@ from subprocess import check_output as run
 
 from datetime import date, timedelta
 
-
 def gpgPassword(password):
     try:
         output = run("gpg --pinentry-mode loopback --batch --yes --passphrase " + hashlib.sha256(password.encode()).hexdigest() + " -d  firefox.log.gz.gpg 2>&1", shell=True)   #shell injection potential, do not run on untrusted input
