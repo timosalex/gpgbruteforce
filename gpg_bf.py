@@ -4,7 +4,6 @@
 
 import hashlib
 from subprocess import check_output as run
-
 from datetime import date, timedelta
 
 def gpgPassword(password):
