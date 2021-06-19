@@ -1,4 +1,4 @@
-# script to brute force a password in the type of yyyy-mm-dd secret_string
+# script to brute force a password using gpg in the type of yyyy-mm-dd secret_string
 # here secret_string is bigtent
 # bruteforcing for date range between start and end date
 
